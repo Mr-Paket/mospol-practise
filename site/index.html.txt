@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stasis - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-text">STASIS</div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="members.html">Участники</a></li>
+                <li><a href="activities.html">О проекте</a></li>
+                <li class="logo"><a href="index.html">STASIS</a></li>
+                <li><a href="game.html">Журнал</a></li>
+                <li><a href="resourses.html">Ресурсы</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trailer">
+            <h1>Добро пожаловать в Stasis</h1>
+            <div class="trailer-container">
+                <img src="images/trailer.jpg" alt="Трейлер игры Stasis">
+                <button class="play-button">▶</button>
+            </div>
+            <p>Исследуйте и вспоминайте жанры с Stasis!</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Свяжитесь с нами</h2>
+            <p>Email: contact@stasis-game.com</p>
+            <p>Социальные сети: 
+                <a href="#">Telegramm</a> | 
+                <a href="#">Discord</a> | 
+                <a href="#">VK</a>
+            </p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Stasis Project. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+    // Плавные переходы между страницами
+      document.querySelectorAll('a[href^="http"]:not([href*="'+window.location.hostname+'"])').forEach(a => {
+          a.addEventListener('click', function(e) {
+              e.preventDefault();
+              document.body.style.opacity = '0';
+              setTimeout(() => {
+                  window.location.href = this.href;
+              }, 500);
+          });
+      });
+
+      document.querySelectorAll('a:not([href^="http"])').forEach(a => {
+          a.addEventListener('click', function(e) {
+              if(this.getAttribute('href') === '#') return;
+              if(this.getAttribute('href').startsWith('#')) return;
+            
+              e.preventDefault();
+              document.body.style.opacity = '0';
+              setTimeout(() => {
+                  window.location.href = this.href;
+              }, 500);
+          });
+      });
+    </script>
+    <script>
+      window.addEventListener('load', function() {
+          setTimeout(function() {
+              document.querySelector('.preloader').classList.add('fade-out');
+          }, 2000); // 2 секунды задержки
+      });
+    </script>
+</body>
+</html>
