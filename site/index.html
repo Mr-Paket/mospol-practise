@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stasis - Главная</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -87,28 +88,7 @@
             document.querySelector('.preloader').style.display = 'none';
         }
 
-        // Для тестирования - кнопка сброса (можно удалить в продакшене)
-        document.addEventListener('DOMContentLoaded', function () {
-            const resetBtn = document.createElement('button');
-            resetBtn.textContent = 'Reset Preloader (тест)';
-            resetBtn.style.position = 'fixed';
-            resetBtn.style.bottom = '20px';
-            resetBtn.style.right = '20px';
-            resetBtn.style.zIndex = '10000';
-            resetBtn.style.padding = '10px';
-            resetBtn.style.background = '#0066cc';
-            resetBtn.style.color = 'white';
-            resetBtn.style.border = 'none';
-            resetBtn.style.borderRadius = '5px';
-            resetBtn.style.cursor = 'pointer';
-
-            resetBtn.addEventListener('click', function () {
-                sessionStorage.removeItem('preloaderShown');
-                location.reload();
-            });
-
-            document.body.appendChild(resetBtn);
-        });
+       
     </script>
 </body>
 </html>
