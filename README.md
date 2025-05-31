@@ -17,6 +17,7 @@
 Выбранная тематика: C#: Creating a Roguelike Game in C#
 
 GitHub репозиторий с проектом: https://github.com/Petrashiv/VeinOfTheForgotten
+
 Официальный сайт с туториалами по библиотеке: https://roguesharp.wordpress.com/
 
 ## Ответственный по проектной (учебной) практике
